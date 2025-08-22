@@ -1,17 +1,18 @@
+// server.js
 const express = require("express");
 const path = require("path");
 
 const app = express();
-const port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
-// Serve static files from "public"
+// Serve static files (like gifs) from the "public" folder
 app.use(express.static(path.join(__dirname, "public")));
 
-// Example endpoint for GIF
-app.get("/gif", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "your.gif"));
+// Example: http://your-railway-app.up.railway.app/hello
+app.get("/hello", (req, res) => {
+  res.send("🚂 Railway server is running!");
 });
 
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
+app.listen(PORT, () => {
+  console.log(`✅ Server running at http://localhost:${PORT}`);
 });
