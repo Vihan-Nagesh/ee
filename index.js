@@ -6,7 +6,7 @@ const port = 3000;
 
 // serve your gif directly at /gif
 app.get("/gif", (req, res) => {
-    res.sendFile(path.join(__dirname, "Furinacaranimeanimefypanimereelsanimeeditanimememesfypfypgitaagotohgensh-ezgif.com-rotate.gif")); // change filename if needed
+    res.sendFile(path.join(__dirname, "Furinacaranimeanimefypanimereelsanimeeditanimememesfypfypgitaagotohgensh-ezgif.com-rotate.gif")); //
 });
 
 app.listen(port, () => {
