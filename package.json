@@ -7,5 +7,6 @@
   },
   "dependencies": {
     "express": "^4.19.2"
+    "stack": "^0.1.0"
   }
 }
