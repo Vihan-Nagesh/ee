@@ -4,11 +4,9 @@ const path = require("path");
 const app = express();
 const port = 3000;
 
-// serve your gif directly at /gif
-app.get("/gif", (req, res) => {
-    res.sendFile(path.join(__dirname, "Furinacaranimeanimefypanimereelsanimeeditanimememesfypfypgitaagotohgensh-ezgif.com-rotate.gif")); //
-});
+// Serve the whole folder as static files
+app.use(express.static(__dirname));
 
 app.listen(port, () => {
-    console.log(`GIF available at: http://localhost:${port}/gif`);
+  console.log(`GIFs available at: http://localhost:${port}`);
 });
